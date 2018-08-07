@@ -14,7 +14,7 @@ build:
 
 integrations:
     notifications:
-        - integrationName: slack
+        - integrationName: slack-perso
           type: slack
           recipients:
             - "#cicd-private"
