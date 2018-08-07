@@ -1,8 +1,8 @@
 language: python
 
 python:
-    - 3.7.0
-    - 2.7.12
+    - "3.7.0"
+    - "2.7"
 
 build:
     pre_ci:
