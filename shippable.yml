@@ -1,8 +1,8 @@
 language: python
 
 python:
-  - 3.4
-  - 3.5
+  - "3.4.5"
+  - "3.5.2"
 
 build:
     pre_ci:
@@ -18,4 +18,5 @@ integrations:
           type: slack
           recipients:
             - "#cicd-private"
-            - "@timothee@lumapps.com"
+            - "Timothée Germain"
+            - "@Timothée Germain"
