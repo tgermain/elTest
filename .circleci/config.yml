@@ -29,7 +29,8 @@ jobs:
           paths:
             - ~/.local/
           key: pip-package-v1-{{ .Branch }}
-
+      - run:
+          command: echo $verySecret
       # run tests!
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
