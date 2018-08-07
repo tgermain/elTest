@@ -15,5 +15,4 @@ integrations:
           type: slack
           recipients:
             - "#cicd-private"
-            - "Timothée Germain"
-            - "@Timothée Germain"
+            - "#Timothée Germain"
