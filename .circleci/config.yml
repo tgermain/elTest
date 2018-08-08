@@ -94,4 +94,4 @@ workflows:
       - "secret":
           requires:
             - pytest
-            - secret
+            - black
