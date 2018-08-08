@@ -88,14 +88,14 @@ workflows:
   version: 2
   everything:
     jobs:
-      - "pytest"
-      - "black"
-      - "flake8"
+      - pytest
+      - black
+      - flake8
       - hold:
-        type: approval
-        requires:
-          - pytest
-          - black
-      - "secret":
-        require:
-          - hold
+          type: approval
+          requires:
+            - pytest
+            - black
+      - secret:
+          requires:
+            - hold
