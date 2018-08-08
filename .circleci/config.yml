@@ -4,22 +4,25 @@
 #
 version: 2
 jobs:
+  secret:
+    docker:
+      - image: circleci/python:3.6.4
+    working_directory: ~/repo
+
+    steps:
+      - run:
+          command: echo $verySecret
   build:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.6.4
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
 
     steps:
       - checkout
-
       - restore_cache:
           keys:
             - pip-packages-v1-{{ .Branch }}
@@ -29,8 +32,7 @@ jobs:
           paths:
             - ~/.local/
           key: pip-package-v1-{{ .Branch }}
-      - run:
-          command: echo $verySecret
+
       # run tests!
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
@@ -48,3 +50,8 @@ jobs:
       - store_artifacts:
           path: test-reports
 
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      build
