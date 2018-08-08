@@ -1,11 +1,13 @@
 language: python
 python:
-    - "3.6"
-
+- '3.6'
 install:
-    - pip install pipenv
-    - pipenv sync --dev
-
+- pip install pipenv
+- pipenv sync --dev
+- echo $titi
 script:
-    - mkdir test-reports
-    - pipenv run pytest --junitxml=test-reports/junit.xml
+- mkdir test-reports
+- pipenv run pytest --junitxml=test-reports/junit.xml
+env:
+  global:
+    secure: p9OkL5eEVL7h0vUhfVDOBMZkZv78lDg92NuxvChn6SSYg5Ymugiggp1/zil33+9IDEUY93uNh4BBOfIswgnNHticSyGL7m+Y9yNDh4S0Qnf/L+axtv6eRWWoFfJEduE5h9L0pE8VImhAu7jMt60NQdUKBXF3RrO8XTsYWRImhYpPAs7GqDRiDua6Nve35FR7Y5YjC9CekFvR33coVH//h6TIK26s3eupvyFKEfOsSBSPS5HGAOHeuN9ooul0aiK2ObkgSIfHPoIeLezeE9qyAWcYYsE6YznoGxB12UCjxO09bSOFTLYleut8cmnl/h31qQiaFnVxlYMvHlgp1kZCcBUEj35bknx9qiug3l0CiwxiidMJDlmv2w9ta1ZcMc8BY423SH3pmcZ00YMHP1zrwb5t+qoBANAtC1Zy0BFm4Ln35ZP3MeSO+0hVOmJjwvh/J7gbBYgaDH55bMj/Cu/I3ovMpKeFiB+QbBeoh2Q0AHuuJjAMYUJnrlPM4SgaAaDIGDQDlgwtMNCmyga0kRP2Bqt2hi1SdiC9tHtzbM4z/88YqmS3JpurVup9nTI4FkrWnq7ujnS68F4Cz9K6MxhkDfA2YQ5u1VAdRGNDwHbgXpyOMAjMybl7Ra1+MfQYws7JZ4lgqd5cDw+q9ORGl4n/OSVBBSig1B01gg7+8bByphw=
