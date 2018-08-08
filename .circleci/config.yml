@@ -91,7 +91,11 @@ workflows:
       - "pytest"
       - "black"
       - "flake8"
+      - hold:
+        type: approval
+        requires:
+          - pytest
+          - black
       - "secret":
-          requires:
-            - pytest
-            - black
+        require:
+          - hold
