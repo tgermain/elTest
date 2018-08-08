@@ -11,8 +11,4 @@ def test_ok():
 
 
 # following list is not black-compatible
-my_list = [
-    1,
-    2,
-    3,
-]
+my_list = [1, 2, 3]
