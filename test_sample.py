@@ -2,6 +2,7 @@ def inc(x):
     return x + 1
 
 
+# more comment
 # def test_failing():
 #    assert inc(3) == 5
 
